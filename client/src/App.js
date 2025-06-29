@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -33,65 +33,61 @@ function App() {
     const [destinations, setDestinations] = useState([])
     const [prices, setPrices] = useState({})
 
-    // handle fetching CAROUSELS *************************************************************************************
-    const fetchCarousel = async () => {
+    // fetch functions wrapped in useCallback
+    const fetchCarousel = useCallback(async () => {
         let response = await getCarousel()
         setCarousel(response.data)
-    }
-
-    useEffect(() => {
-        fetchCarousel().catch((err) => console.log(err.message))
     }, [])
 
-    // handle fetching ALL SERVICES ***********************************************************************************
-    const fetchServices = async () => {
+    const fetchServices = useCallback(async () => {
         let response = await getServices()
         setServices(response.data)
-    }
+    }, [])
+
+    const fetchTrending = useCallback(async () => {
+        let response = await getTrending()
+        setTrending(response.data)
+    }, [])
+
+    const fetchAdvt = useCallback(async () => {
+        let response = await getAdvtBanner()
+        setAdvt(response.data)
+    }, [])
+
+    const fetchDestinations = useCallback(async () => {
+        let response = await getDestinations()
+        setDestinations(response.data)
+    }, [])
+
+    const fetchPrices = useCallback(async () => {
+        let response = await getPrices()
+        setPrices(response.data)
+    }, [])
+
+    // useEffects with correct dependencies
+    useEffect(() => {
+        fetchCarousel().catch((err) => console.log(err.message))
+    }, [fetchCarousel])
 
     useEffect(() => {
         fetchServices().catch((err) => console.log(err.message))
-    }, [])
-
-    // handle fetching TRENDING Destinations ****************************************************************************
-    const fetchTrending = async () => {
-        let response = await getTrending()
-        setTrending(response.data)
-    }
+    }, [fetchServices])
 
     useEffect(() => {
         fetchTrending().catch((err) => console.log(err.message))
-    }, [])
-
-    // handle fetching Advertisements ****************************************************************************
-    const fetchAdvt = async () => {
-        let response = await getAdvtBanner()
-        setAdvt(response.data)
-    }
+    }, [fetchTrending])
 
     useEffect(() => {
         fetchAdvt().catch((err) => console.log(err.message))
-    }, [])
-
-    // handle fetching CREATE OWN Destinations ******************************************************************
-    const fetchDestinations = async () => {
-        let response = await getDestinations()
-        setDestinations(response.data)
-    }
+    }, [fetchAdvt])
 
     useEffect(() => {
         fetchDestinations().catch((err) => console.log(err.message))
-    }, [])
-
-    // handle fetching CREATE OWN Prices ******************************************************************
-    const fetchPrices = async () => {
-        let response = await getPrices()
-        setPrices(response.data)
-    }
+    }, [fetchDestinations])
 
     useEffect(() => {
         fetchPrices().catch((err) => console.log(err.message))
-    }, [])
+    }, [fetchPrices])
 
     return (
         <Router>
@@ -110,6 +106,7 @@ function App() {
                             setIsModalOpen={setIsModalOpen}
                         />
                     </Route>
+
                     <Route
                         exact
                         path="/user"
@@ -123,7 +120,8 @@ function App() {
                                 {...props}
                             />
                         )}
-                    ></Route>
+                    />
+
                     <Route exact path="/user/treks">
                         <Other
                             tab={'Treks'}
@@ -177,7 +175,7 @@ function App() {
                     <Route
                         path="/password-reset/:userID/:token"
                         render={(props) => <Update {...props} />}
-                    ></Route>
+                    />
                 </UserProvider>
             </div>
         </Router>

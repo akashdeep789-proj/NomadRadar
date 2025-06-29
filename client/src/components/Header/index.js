@@ -26,10 +26,16 @@ function Header({ isModalOpen, setIsModalOpen }) {
                 <Container>
                     <div className="header__top">
                         <div className="header__topLeft">
-                            <span><PhoneIcon /> 1800 1498 500</span>
-                            <span><ContactlessIcon /> We Care</span>
-                            <span><LocationOnIcon /> Stores</span>
-                        </div>
+    <a href="tel:18001498500" className="header__link">
+        <span><PhoneIcon /> 1800 1498 500</span>
+    </a>
+    <a href="/user/we-care" className="header__link">
+        <span><ContactlessIcon /> We Care</span>
+    </a>
+    <a href="/user/stores" className="header__link">
+        <span><LocationOnIcon /> Stores</span>
+    </a>
+</div>
                         
                         <div className="header__topRight">
                             {
