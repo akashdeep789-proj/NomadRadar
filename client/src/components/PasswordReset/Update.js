@@ -44,7 +44,7 @@ const Update = ({ match }) => {
             <form onSubmit={handleUpdateSubmit}>
                 <Typography variant="h4">Update Password</Typography>
                 <Typography variant="h6" gutterBottom={true} color="textSecondary">
-                    WanderLust
+                    NomadRadar
                 </Typography>
                 <TextField
                     type="password"

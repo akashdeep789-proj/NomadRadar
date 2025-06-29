@@ -8,7 +8,7 @@ import './WhyUs.css'
 function WhyUs() {
     return (
         <div className="whyUs">
-            <h3 className="whyUs__heading">Why With WanderLust?</h3>
+            <h3 className="whyUs__heading">Why With NomadRadar?</h3>
             <div className="whyUs__cards">
                 {
                     whyUsData.map((card, index) => (

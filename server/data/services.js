@@ -167,7 +167,7 @@ const services = [
         type: 'Treks',
         title: 'KEDARKANTHA TREK',
         overview:
-            'Kedarkantha (not to be confused with the popular Temple Kedarnath) is a 6-day long trek in Govind Pashu Vihar National Park in Uttarakhand (6 when including the travel days from Dehradun to the base camp and back). Kedarkantha is easily one of the most popular treks in India — popular amongst seasoned trekkers and beginners alike. WanderLust is taking you to a place where heaven and mountains meet. The height of the Kedarkantha trek is about 3,810 meters, which is approximately 12,500 feet high. The trek is a perfect 20 km long trail where you can witness the beguiling beauties of the Himalayas and feast your eyes with the snow-covered pathways.',
+            'Kedarkantha (not to be confused with the popular Temple Kedarnath) is a 6-day long trek in Govind Pashu Vihar National Park in Uttarakhand (6 when including the travel days from Dehradun to the base camp and back). Kedarkantha is easily one of the most popular treks in India — popular amongst seasoned trekkers and beginners alike. NomadRadar is taking you to a place where heaven and mountains meet. The height of the Kedarkantha trek is about 3,810 meters, which is approximately 12,500 feet high. The trek is a perfect 20 km long trail where you can witness the beguiling beauties of the Himalayas and feast your eyes with the snow-covered pathways.',
         startDate: '2021-11-01T17:29:00.000Z',
         days: 5,
         price: 8500,

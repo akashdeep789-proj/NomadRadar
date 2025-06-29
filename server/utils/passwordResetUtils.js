@@ -14,15 +14,15 @@ const getPasswordResetURL = (user, token) =>
 const resetPasswordTemplate = (user, url) => {
     const from = process.env.EMAIL_LOGIN
     const to = user.email
-    const subject = '🌻 WanderLust Password Reset 🌻'
+    const subject = '🌻 NomadRadar Password Reset 🌻'
     const html = `
   <p>Hey ${user.firstName},</p>
-  <p>We heard that you lost your WanderLust password. Sorry about that!</p>
+  <p>We heard that you lost your NomadRadar password. Sorry about that!</p>
   <p>But don’t worry! You can use the following link to reset your password:</p>
   <a href=${url}>${url}</a>
   <p>If you don’t use this link within 1 hour, it will expire.</p>
   <p>Thanks & Regards!</p>
-  <p>-WanderLust</p>
+  <p>-NomadRadar</p>
   `
 
     return { from, to, subject, html }

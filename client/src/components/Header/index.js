@@ -52,7 +52,7 @@ function Header({ isModalOpen, setIsModalOpen }) {
                     </div>
                 </Container>
                 <Container>
-                    <Navbar.Brand>WanderLust</Navbar.Brand>
+                    <Navbar.Brand>NomadRadar</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse id="navbarCollapse">
                         <Nav variant="pills">

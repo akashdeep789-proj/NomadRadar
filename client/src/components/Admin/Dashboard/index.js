@@ -216,7 +216,7 @@ function Dashboard() {
                         </IconButton>
                         <Typography variant="h6" noWrap>
                             <span className="dashboard__appBarHeaderDesktop">
-                                WanderLust | Admin-Dashboard
+                                NomadRadar | Admin-Dashboard
                             </span>
                             <span className="dashboard__appBarHeaderMobile">
                                 Admin-Panel

@@ -37,7 +37,7 @@ const Forgot = () => {
             <form onSubmit={handleForgotSubmit}>
                 <Typography variant="h4">Forgot Password</Typography>
                 <Typography variant="h6" gutterBottom={true} color="textSecondary">
-                    WanderLust
+                    NomadRadar
                 </Typography>
                 <TextField
                     type="email"

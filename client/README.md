@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# NomadRadar 
+An intelligent travel recommendation platform built in 2025 using MERN Stack and React Bootstrap.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
+## 🔧 Tech Stack
+- React 18
+- Node.js 20
+- Express.js
+- MongoDB Atlas
+- Material UI v4
+- Bootstrap 5
 
 ### `npm start`
 
@@ -68,3 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## 🧠 Author
+**Akashdeep Kumar**  
+Final Year MCA | Passionate about Full Stack Development  
+[LinkedIn](https://www.linkedin.com/in/akashdeep-ku789) • [GitHub](https://github.com/akashdeep789-proj)
+

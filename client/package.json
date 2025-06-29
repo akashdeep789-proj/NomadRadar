@@ -16,6 +16,8 @@
     "date-fns": "^2.16.1",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.20",
+    "postcss": "^8.5.6",
+    "postcss-safe-parser": "^7.0.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
